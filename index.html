@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ethanix Web Studio — Portfolio</title>
-  <meta name="description" content="Portfolio di Ethan, web designer freelance. Siti moderni, responsive e ottimizzati SEO per aziende e professionisti. Richiedi un preventivo gratuito.">
+  <meta name="description" content="Ethanix Web Studio — Freelance web designer. I build modern, responsive and SEO‑ready showcase websites for small businesses and professionals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0d10;         /* sfondo scuro elegante */
-      --card:#111418;       /* card */
-      --muted:#94a3b8;      /* testo secondario */
-      --ink:#e5e7eb;        /* testo principale */
-      --brand:#ff4e00;      /* accento */
-      --brand-2:#ec9f05;    /* gradiente */
-      --line:#1f2937;       /* bordo */
+      --bg:#0b0d10;         /* dark elegant */
+      --card:#111418;       /* card surface */
+      --muted:#94a3b8;      /* secondary text */
+      --ink:#e5e7eb;        /* primary text */
+      --brand:#ff4e00;      /* accent */
+      --brand-2:#ec9f05;    /* gradient */
+      --line:#1f2937;       /* borders */
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
@@ -39,6 +39,14 @@
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border-color:transparent;color:#111}
     .btn:hover{transform:translateY(-1px);transition:transform .25s}
 
+    /* Lang switch */
+    .lang{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+    .lang button{background:#0e1116;border:0;color:var(--ink);padding:8px 12px;cursor:pointer;display:flex;align-items:center;gap:6px}
+    .lang button.active{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#111;font-weight:800}
+    .flag{width:16px;height:12px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.25) inset}
+    .flag.en{background:linear-gradient(#012169 0 33%, #C8102E 0 67%, #FFFFFF 0 100%)} /* simplified */
+    .flag.it{background:linear-gradient(90deg,#009246 0 33%, #F1F2F1 0 67%, #CE2B37 0 100%)}
+
     /* Sections */
     section{padding:56px 0;border-top:1px solid var(--line)}
     .grid{display:grid;gap:20px}
@@ -54,7 +62,7 @@
     footer{padding:28px 0;color:#9ca3af}
     .cta{display:flex;gap:12px;flex-wrap:wrap}
 
-    /* Animazioni */
+    /* Animations */
     .card, .btn{transition:transform .25s ease, box-shadow .25s ease}
     .card:hover{transform:translateY(-4px)}
   </style>
@@ -67,17 +75,21 @@
         <h1>Ethanix Web Studio</h1>
       </div>
       <div class="cta">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button class="active" data-lang="en" aria-pressed="true"><span class="flag en"></span> EN</button>
+          <button data-lang="it" aria-pressed="false"><span class="flag it"></span> IT</button>
+        </div>
         <a class="btn" href="mailto:ethan.website04@gmail.com">ethan.website04@gmail.com</a>
         <a class="btn primary" target="_blank" href="https://wa.me/393534216239">WhatsApp</a>
       </div>
     </div>
     <div class="container hero">
-      <span class="muted">Freelance Web Designer</span>
-      <h2>Creo siti scuri, moderni e ad alte conversioni.</h2>
-      <p>Aiuto piccole aziende e professionisti a presentarsi online con siti veloci, responsive e ottimizzati SEO. Lavoro in italiano e inglese.</p>
+      <span class="muted" data-i18n="tagline">Freelance Web Designer</span>
+      <h2 data-i18n="hero_title">I build modern showcase websites that convert.</h2>
+      <p data-i18n="hero_sub">I help small businesses and professionals go online with fast, responsive and SEO‑ready websites. I work in English and Italian.</p>
       <div class="cta">
-        <a class="btn primary" target="_blank" href="https://wa.me/393534216239">Richiedi un preventivo</a>
-        <a class="btn" href="#projects">Vedi progetti</a>
+        <a class="btn primary" target="_blank" href="https://wa.me/393534216239" data-i18n="cta_quote">Request a quote</a>
+        <a class="btn" href="#projects" data-i18n="cta_view_projects">View projects</a>
       </div>
     </div>
   </header>
@@ -85,15 +97,15 @@
   <section id="about">
     <div class="container grid grid-2">
       <div>
-        <h3 class="section-title">Chi sono</h3>
-        <p class="muted">Ciao! Sono <strong>Ethan</strong>, web designer freelance. Realizzo siti su misura con attenzione a performance, mobile-first, SEO e usabilità. Lavoro con strumenti moderni e consegno file chiari che il cliente può aggiornare facilmente.</p>
+        <h3 class="section-title" data-i18n="about_title">About me</h3>
+        <p class="muted" data-i18n="about_text">Hi! I'm <strong>Ethan</strong>, a freelance web designer. I create tailor‑made showcase websites with a focus on performance, mobile‑first, SEO and usability. I use modern tools and deliver clean files clients can update easily.</p>
       </div>
       <div class="card">
         <ul style="margin:0;line-height:1.9">
-          <li>⚡ Performance e SEO on‑page</li>
-          <li>📱 Responsive design (mobile first)</li>
-          <li>🛠️ Manutenzione e assistenza</li>
-          <li>🌍 IT / EN</li>
+          <li data-i18n="point_perf">⚡ Performance & on‑page SEO</li>
+          <li data-i18n="point_resp">📱 Responsive design (mobile‑first)</li>
+          <li data-i18n="point_support">🛠️ Maintenance & support</li>
+          <li data-i18n="point_lang">🌍 EN / IT</li>
         </ul>
       </div>
     </div>
@@ -101,23 +113,40 @@
 
   <section id="services">
     <div class="container">
-      <h3 class="section-title">Servizi</h3>
-<p class="muted">Realizzo solo siti vetrina professionali, veloci e ottimizzati per portare clienti alla tua attività.</p>
-<div class="card"><h4>Sito Vetrina Professionale</h4><p class="muted">Design moderno, responsive, SEO on-page, sezione contatti e call-to-action.</p><p><strong>A partire da €500</strong></p></div>
-</section>
+      <h3 class="section-title" data-i18n="services_title">Services</h3>
+      <p class="muted" data-i18n="services_sub">I exclusively build professional showcase websites — fast, SEO‑ready and designed to bring you new clients.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h4 style="margin:0 0 8px" data-i18n="pkg_base">Showcase — Base</h4>
+          <p class="muted" data-i18n="pkg_base_desc">Professional template with your branding and content. Perfect to start.</p>
+          <p><strong data-i18n="pkg_base_price">€500</strong></p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 8px" data-i18n="pkg_std">Showcase — Standard</h4>
+          <p class="muted" data-i18n="pkg_std_desc">Custom design with tailored sections and optimized copywriting.</p>
+          <p><strong data-i18n="pkg_std_price">€800</strong></p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 8px" data-i18n="pkg_prem">Showcase — Premium</h4>
+          <p class="muted" data-i18n="pkg_prem_desc">Exclusive design, premium animations, branding and advanced SEO.</p>
+          <p><strong data-i18n="pkg_prem_price">€1200+</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="projects">
     <div class="container">
-      <h3 class="section-title">Progetti</h3>
+      <h3 class="section-title" data-i18n="projects_title">Projects</h3>
       <div class="card grid grid-2" style="align-items:center">
         <div>
-          <img src="https://images.unsplash.com/photo-1541745537413-b804bfff6974?q=80&w=1600&auto=format&fit=crop" alt="Anteprima sito pizzeria"/>
+          <img src="https://images.unsplash.com/photo-1541745537413-b804bfff6974?q=80&w=1600&auto=format&fit=crop" alt="Pizzeria website preview"/>
         </div>
         <div>
-          <h4 style="margin:0 0 6px">Pizzeria al Forno</h4>
-          <p class="muted" style="margin:0 0 12px">Demo bilingue (IT/EN) ottimizzata SEO, prenotazioni via WhatsApp e menù digitale.</p>
+          <h4 style="margin:0 0 6px" data-i18n="proj1_title">Pizzeria al Forno</h4>
+          <p class="muted" style="margin:0 0 12px" data-i18n="proj1_desc">Bilingual (IT/EN) demo — SEO optimized, WhatsApp reservations and digital menu.</p>
           <div class="cta">
-            <a class="btn" target="_blank" href="https://rawest04.github.io/pizzeria-demo">Visualizza Demo</a>
+            <a class="btn" target="_blank" href="https://rawest04.github.io/pizzeria-demo" data-i18n="proj1_btn">View demo</a>
           </div>
         </div>
       </div>
@@ -127,27 +156,27 @@
   <section id="why">
     <div class="container grid grid-3">
       <div class="card">
-        <h4 style="margin:0 0 6px">Design & Branding</h4>
-        <p class="muted">Stile coerente con la tua identità, attenzione ai dettagli e tipografia elegante.</p>
+        <h4 style="margin:0 0 6px" data-i18n="why1_t">Design & Branding</h4>
+        <p class="muted" data-i18n="why1_d">Consistent look & feel with elegant typography and attention to detail.</p>
       </div>
       <div class="card">
-        <h4 style="margin:0 0 6px">SEO & Velocità</h4>
-        <p class="muted">Struttura semantica, meta tag, immagini ottimizzate e caricamento rapido.</p>
+        <h4 style="margin:0 0 6px" data-i18n="why2_t">SEO & Speed</h4>
+        <p class="muted" data-i18n="why2_d">Semantic structure, meta tags, optimized images and fast loading times.</p>
       </div>
       <div class="card">
-        <h4 style="margin:0 0 6px">Supporto diretto</h4>
-        <p class="muted">Parli direttamente con me su WhatsApp. Zero burocrazia, massima velocità.</p>
+        <h4 style="margin:0 0 6px" data-i18n="why3_t">Direct support</h4>
+        <p class="muted" data-i18n="why3_d">Speak directly with me on WhatsApp. No bureaucracy, fast delivery.</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="container" style="text-align:center">
-      <h3 class="section-title">Pronto a iniziare?</h3>
-      <p class="muted" style="margin:0 0 16px">Preventivo gratuito e senza impegno in 24 ore.</p>
+      <h3 class="section-title" data-i18n="contact_title">Ready to start?</h3>
+      <p class="muted" style="margin:0 0 16px" data-i18n="contact_sub">Free quote within 24 hours — no strings attached.</p>
       <div class="cta" style="justify-content:center">
-        <a class="btn primary" target="_blank" href="https://wa.me/393534216239">Contattami su WhatsApp</a>
-        <a class="btn" href="mailto:ethan.website04@gmail.com">Scrivimi via email</a>
+        <a class="btn primary" target="_blank" href="https://wa.me/393534216239" data-i18n="contact_whatsapp">Contact me on WhatsApp</a>
+        <a class="btn" href="mailto:ethan.website04@gmail.com" data-i18n="contact_email">Email me</a>
       </div>
     </div>
   </section>
@@ -155,11 +184,133 @@
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <span class="muted">© <span id="year"></span> Ethanix Web Studio</span>
-      <span class="muted">IT / EN</span>
+      <span class="muted">EN / IT</span>
     </div>
   </footer>
 
   <script>
+    // ===== i18n dictionary =====
+    const dict = {
+      en: {
+        tagline: "Freelance Web Designer",
+        hero_title: "I build modern showcase websites that convert.",
+        hero_sub: "I help small businesses and professionals go online with fast, responsive and SEO‑ready websites. I work in English and Italian.",
+        cta_quote: "Request a quote",
+        cta_view_projects: "View projects",
+
+        about_title: "About me",
+        about_text: "Hi! I'm <strong>Ethan</strong>, a freelance web designer. I create tailor‑made showcase websites with a focus on performance, mobile‑first, SEO and usability. I use modern tools and deliver clean files clients can update easily.",
+        point_perf: "⚡ Performance & on‑page SEO",
+        point_resp: "📱 Responsive design (mobile‑first)",
+        point_support: "🛠️ Maintenance & support",
+        point_lang: "🌍 EN / IT",
+
+        services_title: "Services",
+        services_sub: "I exclusively build professional showcase websites — fast, SEO‑ready and designed to bring you new clients.",
+        pkg_base: "Showcase — Base",
+        pkg_base_desc: "Professional template with your branding and content. Perfect to start.",
+        pkg_base_price: "€500",
+        pkg_std: "Showcase — Standard",
+        pkg_std_desc: "Custom design with tailored sections and optimized copywriting.",
+        pkg_std_price: "€800",
+        pkg_prem: "Showcase — Premium",
+        pkg_prem_desc: "Exclusive design, premium animations, branding and advanced SEO.",
+        pkg_prem_price: "€1200+",
+
+        projects_title: "Projects",
+        proj1_title: "Pizzeria al Forno",
+        proj1_desc: "Bilingual (IT/EN) demo — SEO optimized, WhatsApp reservations and digital menu.",
+        proj1_btn: "View demo",
+
+        why1_t: "Design & Branding",
+        why1_d: "Consistent look & feel with elegant typography and attention to detail.",
+        why2_t: "SEO & Speed",
+        why2_d: "Semantic structure, meta tags, optimized images and fast loading times.",
+        why3_t: "Direct support",
+        why3_d: "Speak directly with me on WhatsApp. No bureaucracy, fast delivery.",
+
+        contact_title: "Ready to start?",
+        contact_sub: "Free quote within 24 hours — no strings attached.",
+        contact_whatsapp: "Contact me on WhatsApp",
+        contact_email: "Email me",
+      },
+      it: {
+        tagline: "Web Designer Freelance",
+        hero_title: "Creo siti vetrina moderni che convertono.",
+        hero_sub: "Aiuto piccole aziende e professionisti ad andare online con siti veloci, responsive e ottimizzati SEO. Lavoro in inglese e italiano.",
+        cta_quote: "Richiedi un preventivo",
+        cta_view_projects: "Vedi progetti",
+
+        about_title: "Chi sono",
+        about_text: "Ciao! Sono <strong>Ethan</strong>, web designer freelance. Realizzo siti vetrina su misura con attenzione a performance, mobile‑first, SEO e usabilità. Uso strumenti moderni e consegno file chiari che il cliente può aggiornare facilmente.",
+        point_perf: "⚡ Performance e SEO on‑page",
+        point_resp: "📱 Responsive design (mobile‑first)",
+        point_support: "🛠️ Manutenzione e assistenza",
+        point_lang: "🌍 EN / IT",
+
+        services_title: "Servizi",
+        services_sub: "Realizzo esclusivamente siti vetrina professionali: veloci, ottimizzati SEO e progettati per portarti nuovi clienti.",
+        pkg_base: "Vetrina — Base",
+        pkg_base_desc: "Template professionale con il tuo brand e contenuti. Perfetto per iniziare.",
+        pkg_base_price: "€500",
+        pkg_std: "Vetrina — Standard",
+        pkg_std_desc: "Design personalizzato con sezioni su misura e testi ottimizzati.",
+        pkg_std_price: "€800",
+        pkg_prem: "Vetrina — Premium",
+        pkg_prem_desc: "Design esclusivo, animazioni premium, branding e SEO avanzata.",
+        pkg_prem_price: "€1200+",
+
+        projects_title: "Progetti",
+        proj1_title: "Pizzeria al Forno",
+        proj1_desc: "Demo bilingue (IT/EN) — SEO ottimizzata, prenotazioni WhatsApp e menù digitale.",
+        proj1_btn: "Visualizza demo",
+
+        why1_t: "Design & Branding",
+        why1_d: "Stile coerente con tipografia elegante e attenzione ai dettagli.",
+        why2_t: "SEO & Velocità",
+        why2_d: "Struttura semantica, meta tag, immagini ottimizzate e caricamento rapido.",
+        why3_t: "Supporto diretto",
+        why3_d: "Parli direttamente con me su WhatsApp. Zero burocrazia, consegna rapida.",
+
+        contact_title: "Pronto a iniziare?",
+        contact_sub: "Preventivo gratuito entro 24 ore — senza impegno.",
+        contact_whatsapp: "Contattami su WhatsApp",
+        contact_email: "Scrivimi via email",
+      }
+    };
+
+    // ===== language toggle =====
+    const switcher = document.querySelector('.lang');
+    const langButtons = switcher.querySelectorAll('button');
+    let currentLang = 'en'; // default English
+
+    function applyI18n(lang){
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        const value = dict[lang][key];
+        if(!value) return;
+        // allow inner HTML for bold etc.
+        if(/</.test(value)) el.innerHTML = value; else el.textContent = value;
+      });
+      langButtons.forEach(b=>{
+        const isActive = b.dataset.lang===lang;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-pressed', isActive);
+      });
+    }
+
+    langButtons.forEach(b=>{
+      b.addEventListener('click', ()=>{
+        currentLang = b.dataset.lang;
+        applyI18n(currentLang);
+      });
+    });
+
+    // init
+    applyI18n(currentLang);
+
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
