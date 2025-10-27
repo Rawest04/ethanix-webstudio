@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ethanix Web Studio — Portfolio</title>
-  <meta name="description" content="Ethanix Web Studio — Freelance web designer. I build modern, responsive and SEO‑ready showcase websites for small businesses and professionals.">
+  <meta name="description" content="Ethanix Web Studio — Freelance web designer. I build modern, responsive and SEO-ready showcase websites for small businesses and professionals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,6 @@
     img{max-width:100%;display:block;border-radius:16px}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-    /* Header / Hero */
     header{position:relative;isolation:isolate;background:radial-gradient(1000px 400px at 20% 0%, rgba(236,159,5,.15), transparent 60%), radial-gradient(800px 300px at 80% 10%, rgba(255,78,0,.12), transparent 60%)}
     .hero{padding:72px 0 54px}
     .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
@@ -39,7 +38,6 @@
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border-color:transparent;color:#111}
     .btn:hover{transform:translateY(-1px);transition:transform .25s}
 
-    /* Lang switch */
     .lang{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;overflow:hidden}
     .lang button{background:#0e1116;border:0;color:var(--ink);padding:8px 12px;cursor:pointer;display:flex;align-items:center;gap:6px}
     .lang button.active{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#111;font-weight:800}
@@ -47,7 +45,6 @@
     .flag.en{background:linear-gradient(#012169 0 33%, #C8102E 0 67%, #FFFFFF 0 100%)} /* simplified */
     .flag.it{background:linear-gradient(90deg,#009246 0 33%, #F1F2F1 0 67%, #CE2B37 0 100%)}
 
-    /* Sections */
     section{padding:56px 0;border-top:1px solid var(--line)}
     .grid{display:grid;gap:20px}
     .grid-2{grid-template-columns:1fr}
@@ -58,11 +55,9 @@
     .section-title{font-family:"Playfair Display",serif;font-size:32px;margin:0 0 14px}
     .muted{color:var(--muted)}
 
-    /* Footer */
     footer{padding:28px 0;color:#9ca3af}
     .cta{display:flex;gap:12px;flex-wrap:wrap}
 
-    /* Animations */
     .card, .btn{transition:transform .25s ease, box-shadow .25s ease}
     .card:hover{transform:translateY(-4px)}
   </style>
@@ -103,7 +98,7 @@
     <div class="container hero">
       <span class="muted" data-i18n="tagline">Freelance Web Designer</span>
       <h2 data-i18n="hero_title">I build modern showcase websites that convert.</h2>
-      <p data-i18n="hero_sub">I help small businesses and professionals go online with fast, responsive and SEO‑ready websites. I work in English and Italian.</p>
+      <p data-i18n="hero_sub">I help small businesses and professionals go online with fast, responsive and SEO-ready websites. I work in English and Italian.</p>
       <div class="cta">
         <a class="btn primary" target="_blank" href="https://wa.me/393534216239" data-i18n="cta_quote">Request a quote</a>
         <a class="btn" href="#projects" data-i18n="cta_view_projects">View projects</a>
@@ -115,12 +110,12 @@
     <div class="container grid grid-2">
       <div>
         <h3 class="section-title" data-i18n="about_title">About me</h3>
-        <p class="muted" data-i18n="about_text">Hi! I'm <strong>Ethan</strong>, a freelance web designer. I create tailor‑made showcase websites with a focus on performance, mobile‑first, SEO and usability. I use modern tools and deliver clean files clients can update easily.</p>
+        <p class="muted" data-i18n="about_text">Hi! I'm <strong>Ethan</strong>, a freelance web designer. I create tailor-made showcase websites with a focus on performance, mobile-first, SEO and usability. I use modern tools and deliver clean files clients can update easily.</p>
       </div>
       <div class="card">
         <ul style="margin:0;line-height:1.9">
-          <li data-i18n="point_perf">⚡ Performance & on‑page SEO</li>
-          <li data-i18n="point_resp">📱 Responsive design (mobile‑first)</li>
+          <li data-i18n="point_perf">⚡ Performance & on-page SEO</li>
+          <li data-i18n="point_resp">📱 Responsive design (mobile-first)</li>
           <li data-i18n="point_support">🛠️ Maintenance & support</li>
           <li data-i18n="point_lang">🌍 EN / IT</li>
         </ul>
@@ -131,7 +126,7 @@
   <section id="services">
     <div class="container">
       <h3 class="section-title" data-i18n="services_title">Services</h3>
-      <p class="muted" data-i18n="services_sub">I exclusively build professional showcase websites — fast, SEO‑ready and designed to bring you new clients.</p>
+      <p class="muted" data-i18n="services_sub">I exclusively build professional showcase websites — fast, SEO-ready and designed to bring you new clients.</p>
       <div class="grid grid-3">
         <div class="card">
           <h4 style="margin:0 0 8px" data-i18n="pkg_base">Showcase — Base</h4>
@@ -167,6 +162,20 @@
           </div>
         </div>
       </div>
+
+      <div class="card grid grid-2" style="align-items:center">
+        <div>
+          <img src="https://images.unsplash.com/photo-1593702287920-9b9e7c63b2cd?q=80&w=1600&auto=format&fit=crop" alt="Luxury Hair Salon website preview"/>
+        </div>
+        <div>
+          <h4 style="margin:0 0 6px" data-i18n="proj2_title">Luxury Hair Salon</h4>
+          <p class="muted" style="margin:0 0 12px" data-i18n="proj2_desc">Elegant and modern demo website for hairdressers and barber shops — designed for premium clients.</p>
+          <div class="cta">
+            <a class="btn" target="_blank" href="https://rawest04.github.io/hair-salon-demo" data-i18n="proj2_btn">View demo</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -206,24 +215,23 @@
   </footer>
 
   <script>
-    // ===== i18n dictionary =====
     const dict = {
       en: {
         tagline: "Freelance Web Designer",
         hero_title: "I build modern showcase websites that convert.",
-        hero_sub: "I help small businesses and professionals go online with fast, responsive and SEO‑ready websites. I work in English and Italian.",
+        hero_sub: "I help small businesses and professionals go online with fast, responsive and SEO-ready websites. I work in English and Italian.",
         cta_quote: "Request a quote",
         cta_view_projects: "View projects",
 
         about_title: "About me",
-        about_text: "Hi! I'm <strong>Ethan</strong>, a freelance web designer. I create tailor‑made showcase websites with a focus on performance, mobile‑first, SEO and usability. I use modern tools and deliver clean files clients can update easily.",
-        point_perf: "⚡ Performance & on‑page SEO",
-        point_resp: "📱 Responsive design (mobile‑first)",
+        about_text: "Hi! I'm <strong>Ethan</strong>, a freelance web designer. I create tailor-made showcase websites with a focus on performance, mobile-first, SEO and usability. I use modern tools and deliver clean files clients can update easily.",
+        point_perf: "⚡ Performance & on-page SEO",
+        point_resp: "📱 Responsive design (mobile-first)",
         point_support: "🛠️ Maintenance & support",
         point_lang: "🌍 EN / IT",
 
         services_title: "Services",
-        services_sub: "I exclusively build professional showcase websites — fast, SEO‑ready and designed to bring you new clients.",
+        services_sub: "I exclusively build professional showcase websites — fast, SEO-ready and designed to bring you new clients.",
         pkg_base: "Showcase — Base",
         pkg_base_desc: "Professional template with your branding and content. Perfect to start.",
         pkg_base_price: "€500",
@@ -238,6 +246,10 @@
         proj1_title: "Pizzeria al Forno",
         proj1_desc: "Bilingual (IT/EN) demo — SEO optimized, WhatsApp reservations and digital menu.",
         proj1_btn: "View demo",
+
+        proj2_title: "Luxury Hair Salon",
+        proj2_desc: "Elegant and modern demo website for hairdressers and barber shops — designed for premium clients.",
+        proj2_btn: "View demo",
 
         why1_t: "Design & Branding",
         why1_d: "Consistent look & feel with elegant typography and attention to detail.",
@@ -259,9 +271,9 @@
         cta_view_projects: "Vedi progetti",
 
         about_title: "Chi sono",
-        about_text: "Ciao! Sono <strong>Ethan</strong>, web designer freelance. Realizzo siti vetrina su misura con attenzione a performance, mobile‑first, SEO e usabilità. Uso strumenti moderni e consegno file chiari che il cliente può aggiornare facilmente.",
-        point_perf: "⚡ Performance e SEO on‑page",
-        point_resp: "📱 Responsive design (mobile‑first)",
+        about_text: "Ciao! Sono <strong>Ethan</strong>, web designer freelance. Realizzo siti vetrina su misura con attenzione a performance, mobile-first, SEO e usabilità. Uso strumenti moderni e consegno file chiari che il cliente può aggiornare facilmente.",
+        point_perf: "⚡ Performance e SEO on-page",
+        point_resp: "📱 Responsive design (mobile-first)",
         point_support: "🛠️ Manutenzione e assistenza",
         point_lang: "🌍 EN / IT",
 
@@ -282,6 +294,10 @@
         proj1_desc: "Demo bilingue (IT/EN) — SEO ottimizzata, prenotazioni WhatsApp e menù digitale.",
         proj1_btn: "Visualizza demo",
 
+        proj2_title: "Luxury Hair Salon",
+        proj2_desc: "Demo elegante e moderna per parrucchieri e barber shop — pensata per clienti premium.",
+        proj2_btn: "Visualizza demo",
+
         why1_t: "Design & Branding",
         why1_d: "Stile coerente con tipografia elegante e attenzione ai dettagli.",
         why2_t: "SEO & Velocità",
@@ -296,10 +312,9 @@
       }
     };
 
-    // ===== language toggle =====
     const switcher = document.querySelector('.lang');
     const langButtons = switcher.querySelectorAll('button');
-    let currentLang = 'en'; // default English
+    let currentLang = 'en';
 
     function applyI18n(lang){
       document.documentElement.lang = lang;
@@ -307,7 +322,6 @@
         const key = el.getAttribute('data-i18n');
         const value = dict[lang][key];
         if(!value) return;
-        // allow inner HTML for bold etc.
         if(/</.test(value)) el.innerHTML = value; else el.textContent = value;
       });
       langButtons.forEach(b=>{
@@ -324,14 +338,14 @@
       });
     });
 
-    // init
     applyI18n(currentLang);
 
-    // year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
+
 
 
 
